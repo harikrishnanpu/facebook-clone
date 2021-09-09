@@ -7,10 +7,13 @@ import FlagIcon from '@material-ui/icons/Flag';
 import  StoreFrontOutlinedIcon  from '@material-ui/icons/StorefrontOutlined';
 import SubscriptionsOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined'
 import SupervisedUserCircleOutlinedIcon from '@material-ui/icons/SupervisedUserCircle';
-import  { useStateValue } from './StateProvider'
+import  { useStateValue } from './StateProvider';
+import useWindowDimensions from './useDimensionsHook';
 
 function Header() {
     const [{user},dispatch] = useStateValue();
+    const { height, width } = useWindowDimensions();
+
     return (
         <div className="header">
             <div className="header__left">
@@ -22,7 +25,7 @@ function Header() {
                 </div>
             </div>
 
-            <div className="header__center">
+           { width > "900" ? <div className="header__center">
                 <div className="header__option header__option--active">
                     <HomeIcon fontSize="large" />
                 </div>
@@ -38,7 +41,7 @@ function Header() {
                 <div className="header__option">
                     <SupervisedUserCircleOutlinedIcon fontSize="large"/>
                 </div>
-            </div>
+            </div> : "" }
 
             <div className="header__right">
                 <div className="header__info">

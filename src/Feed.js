@@ -26,7 +26,7 @@ function Feed() {
                     username={post.data.username}
                 />
             ))}
-
+            <br/>
         </div>
     )
 }

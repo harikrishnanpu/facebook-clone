@@ -8,6 +8,7 @@
     width: 100%;
 }
 
+
 .messageSender__top{
     display: flex;
     border-bottom: 1px solid #eff2f5;
@@ -17,7 +18,7 @@
 .messageSender__top > form{
     flex: 1;
     display: flex;
-
+    
 }
 
 
@@ -62,3 +63,30 @@
     border-radius: 20px;
 }
 
+
+@media screen and (max-width:600px) {
+    .messageSender__top{
+        padding: 10px;
+    }
+
+    .messageSender__bottom{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .messageSender{
+        border-radius: 10px;
+        width: 95%;
+    }
+
+    .messageSender__option{
+        padding: 15px;
+        margin: 1px;
+        width: 100%;
+    }
+
+    .messageSender__top > form > input{
+        padding: 10px 8px;
+    }
+
+}

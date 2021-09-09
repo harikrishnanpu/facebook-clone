@@ -10,6 +10,13 @@
     margin-right: 10px;
     transition: transform 100ms  ease-in;
     cursor: pointer;
+    margin-top: 20px;
+}
+
+@media  screen and (max-width:600px) {
+    .story{
+        width: 100px;
+    }
 }
 
 .story:hover{
@@ -18,7 +25,7 @@
 
 .story__avatar {
     margin: 10px;
-    border: 5px solid #2e81f4;
+    border: 3px solid #2e81f4;
 }
 
 .story > h4{

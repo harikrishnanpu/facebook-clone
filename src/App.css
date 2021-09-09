@@ -1,3 +1,13 @@
+*{
+  margin: 0;
+}
+
+
+html{
+  scroll-behavior: smooth;
+  transition: transform 2s ease;
+}
+
 .app{
   background-color: #f1f2f5;
   height: 100%;
